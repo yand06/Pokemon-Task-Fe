@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=VT323&display=swap");
+
+*,
+*::before,
+*::after {
+  font-family: "VT323", monospace;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+@keyframes throw {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-150px) translateX(50px) rotate(360deg);
+  }
+  100% {
+    transform: translateY(0) translateX(100px) rotate(720deg);
+  }
+}
+.animate-throw {
+  animation: throw 1s ease-in-out forwards;
+}
