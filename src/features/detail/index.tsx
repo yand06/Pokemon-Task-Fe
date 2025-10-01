@@ -101,7 +101,7 @@ const DetailScreen: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden mt-8 ">
+    <div className="min-h-screen bg-black relative overflow-hidden mt-0 md:mt-7">
       {/* Animated Background Grid */}
       <div className="fixed inset-0 opacity-10">
         <div

@@ -5,7 +5,7 @@ interface PokemonGridProps {
   pokemons: PokemonCardData[];
   isFavorite?: boolean;
   onRemove?: (nickname: string) => void;
-  capturedPokemons?: string[]; // daftar nickname/name Pokémon yang sudah ditangkap
+  capturedPokemons?: string[];
 }
 
 const PokemonGrid: React.FC<PokemonGridProps> = ({
@@ -15,16 +15,16 @@ const PokemonGrid: React.FC<PokemonGridProps> = ({
   capturedPokemons = [],
 }) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <div className="grid grid-cols-1 px-4 md:grid-cols-4 lg:grid-cols-5 gap-6">
       {pokemons.map((p) => {
-        const captured = capturedPokemons.includes(p.name); // cek sudah ditangkap
+        const captured = capturedPokemons.includes(p.name);
         return (
           <PokemonCard
             key={isFavorite ? p.nickname : p.id}
             pokemon={p}
             isFavorite={isFavorite}
             onRemove={onRemove}
-            captured={captured} // ✅ pass ke card
+            captured={captured}
           />
         );
       })}

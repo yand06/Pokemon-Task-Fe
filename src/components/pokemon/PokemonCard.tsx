@@ -64,7 +64,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({
     <div
       className={`
         group cursor-pointer relative overflow-hidden
-        rounded-3xl backdrop-blur-lg border border-white/10
+        rounded-2xl backdrop-blur-lg border border-white/10
         shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.15)]
         transition-all duration-500 ease-out
         hover:-translate-y-2 hover:scale-[1.02]
@@ -82,29 +82,26 @@ const PokemonCard: React.FC<PokemonCardProps> = ({
       `}
       onClick={() => navigate(`/detail/${pokemon.name}`)}
     >
-      {/* Animated background glow effect */}
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-400/5 via-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl" />
 
-      {/* Content container with proper z-index */}
       <div className="relative z-10 p-6 flex flex-col items-center">
-        {/* Enhanced remove button with modern design */}
         {isFavorite && pokemon.nickname && onRemove && (
           <button
-            className="absolute -top-3 -right-3 z-20 group/btn
-              w-8 h-8 rounded-full backdrop-blur-xl
-              bg-gradient-to-br from-red-500/80 to-red-600/80
-              hover:from-red-600/90 hover:to-red-700/90
-              border border-white/20 shadow-lg
-              flex items-center justify-center text-white font-bold text-lg
-              transform transition-all duration-300 ease-out
-              hover:scale-110 hover:rotate-90 hover:shadow-xl
-              active:scale-95"
+            className="absolute top-2 right-2 z-20 group/btn
+    w-6 h-6 sm:w-7 sm:h-7 rounded-md backdrop-blur-xl
+    bg-gradient-to-br from-red-500/80 to-red-600/80
+    hover:from-red-600/90 hover:to-red-700/90
+    border border-white/20 shadow-lg
+    flex items-center justify-center text-white font-bold text-sm
+    transform transition-all duration-300 ease-out
+    hover:scale-110 hover:rotate-90 hover:shadow-xl
+    active:scale-95"
             onClick={(e) => {
               e.stopPropagation();
               onRemove(pokemon.nickname!);
             }}
           >
-            <span className="transition-transform duration-300 group-hover/btn:rotate-180">
+            <span className="transition-transform duration-300 group-hover/btn:rotate-180 leading-none">
               ×
             </span>
           </button>

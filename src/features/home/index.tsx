@@ -93,19 +93,7 @@ const HomeScreen: React.FC = () => {
             </div>
           ) : (
             <>
-              <div className="mb-6 text-center">
-                <p className="text-sm text-gray-400 font-mono">
-                  <span className="text-cyan-400">[{offset + 1}]</span> -
-                  <span className="text-pink-400">
-                    [{Math.min(offset + limit, TOTAL_POKEMON)}]
-                  </span>{" "}
-                  of
-                  <span className="text-green-400">
-                    [{TOTAL_POKEMON.toLocaleString()}]
-                  </span>{" "}
-                  entities
-                </p>
-              </div>
+              <div className="mb-6 text-center"></div>
               <PokemonGrid
                 pokemons={pokemons}
                 capturedPokemons={myPokemons.map(
