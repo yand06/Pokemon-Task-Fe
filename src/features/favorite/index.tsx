@@ -23,7 +23,7 @@ const MyPokemon: React.FC = () => {
   }
 
   return (
-    <div className="p-2">
+    <div className="p-6">
       <PokemonGrid pokemons={pokemons} isFavorite onRemove={handleRemove} />
     </div>
   );

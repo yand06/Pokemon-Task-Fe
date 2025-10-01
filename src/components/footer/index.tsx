@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs">
           <div className="text-gray-500 font-mono text-center sm:text-left">
-            <p>© 2025 Pokémon Database • Built with ⚡ and 💙</p>
+            <p>© 2025 Pokémon Database</p>
           </div>
         </div>
       </div>

@@ -101,7 +101,7 @@ const DetailScreen: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-black relative overflow-hidden mt-8 ">
       {/* Animated Background Grid */}
       <div className="fixed inset-0 opacity-10">
         <div
@@ -133,57 +133,8 @@ const DetailScreen: React.FC = () => {
                         hover:text-cyan-200 transition-all duration-300 font-mono text-sm"
             >
               <FaArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
-              BACK TO GRID
+              BACK TO POKEMON LIST
             </button>
-
-            {/* Pokemon Name & ID */}
-            <div className="flex-1">
-              <div className="flex items-center gap-3">
-                <h1 className="text-2xl font-black font-mono bg-gradient-to-r from-cyan-400 via-pink-400 to-green-400 bg-clip-text text-transparent capitalize">
-                  {pokemon.name}
-                </h1>
-                <span className="px-3 py-1 bg-gray-800/50 border border-gray-600/50 rounded-full text-gray-300 font-mono text-sm">
-                  #{pokemon.id.toString().padStart(3, "0")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 mt-1">
-                <div className="h-px bg-gradient-to-r from-cyan-400 to-transparent flex-1 max-w-32" />
-                <span className="text-green-400 text-xs font-mono tracking-widest">
-                  POKEMON DATA
-                </span>
-              </div>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="hidden lg:flex items-center gap-4 text-sm font-mono">
-              <div className="flex items-center gap-2">
-                <FaHeart className="text-red-400" />
-                <span className="text-gray-400">HP</span>
-                <span className="text-red-300">
-                  {pokemon.stats.find((s) => s.stat.name === "hp")?.base_stat}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaBolt className="text-yellow-400" />
-                <span className="text-gray-400">ATK</span>
-                <span className="text-yellow-300">
-                  {
-                    pokemon.stats.find((s) => s.stat.name === "attack")
-                      ?.base_stat
-                  }
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaShield className="text-blue-400" />
-                <span className="text-gray-400">DEF</span>
-                <span className="text-blue-300">
-                  {
-                    pokemon.stats.find((s) => s.stat.name === "defense")
-                      ?.base_stat
-                  }
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -287,15 +238,6 @@ const DetailScreen: React.FC = () => {
 
             {/* Additional Actions */}
             <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => navigate("/")}
-                className="px-6 py-2 border border-gray-600/50 rounded-lg text-gray-400 
-                          hover:border-gray-500/70 hover:text-gray-300 hover:bg-gray-800/20 
-                          transition-all duration-300 font-mono text-sm"
-              >
-                ← POKEMON GRID
-              </button>
-
               <button
                 onClick={() => navigate("/my-pokemon")}
                 className="px-6 py-2 border border-cyan-500/50 rounded-lg text-cyan-400 
