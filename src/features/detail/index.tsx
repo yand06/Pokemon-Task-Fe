@@ -5,8 +5,7 @@ import PokemonAbilities from "../../components/pokemon/PokemonAbilities";
 import PokemonMoves from "../../components/pokemon/PokemonMoves";
 import { useNavigate } from "react-router";
 import { usePokemonDetail } from "../../hooks/pokemon/usePokemonDetail";
-import { FaArrowLeft, FaBolt, FaHeart } from "react-icons/fa";
-import { FaShield } from "react-icons/fa6";
+import { FaArrowLeft, FaBolt } from "react-icons/fa";
 
 // Cyberpunk-themed warna tipe Pokémon dengan neon effects
 const typeColors: Record<string, string> = {

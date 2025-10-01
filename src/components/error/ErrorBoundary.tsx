@@ -90,19 +90,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                   Try Again
                 </button>
               </div>
-
-              {/* Debug info (only in development) */}
-              {procces.env.NODE_ENV === "development" && this.state.error && (
-                <details className="mt-4 text-left">
-                  <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                    Error Details (Dev Only)
-                  </summary>
-                  <pre className="mt-2 text-xs bg-gray-100 dark:bg-gray-700 p-3 rounded overflow-auto max-h-40">
-                    {this.state.error.toString()}
-                    {this.state.errorInfo?.componentStack}
-                  </pre>
-                </details>
-              )}
             </div>
           </div>
         </div>

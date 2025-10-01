@@ -7,7 +7,7 @@ type Props = {
 };
 
 // Ability type colors dengan glassmorphism styling
-const getAbilityColor = (abilityName: string, index: number) => {
+const getAbilityColor = (_name: string, index: number) => {
   const colors = [
     "bg-gradient-to-br from-blue-400/80 via-cyan-500/80 to-blue-600/80 backdrop-blur-md border border-blue-300/20",
     "bg-gradient-to-br from-purple-400/80 via-violet-500/80 to-purple-600/80 backdrop-blur-md border border-purple-300/20",
