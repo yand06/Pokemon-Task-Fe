@@ -16,7 +16,7 @@ const MyPokemon: React.FC = () => {
 
   if (pokemons.length === 0) {
     return (
-      <div className="p-4 text-center text-gray-300">
+      <div className="p-4 text-center text-gray-300 md:mt-50">
         Belum ada Pokémon yang ditangkap
       </div>
     );
